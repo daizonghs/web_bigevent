@@ -46,7 +46,8 @@ $(() => {
                 if (res.status !== 0) {
                     return layer.msg('获取文章列表失败！')
                 }
-                var htmlStr = template('tpl-table"', res)
+                console.log(res);
+                var htmlStr = template('tpl-table', res)
                 $('tbody').html(htmlStr)
 
                 // 调用渲染分页的方法
